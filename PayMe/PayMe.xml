@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PayMe</name>
+    </assembly>
+    <members>
+        <member name="T:PayMe.Controllers.ValuesController">
+            <summary>
+            基本接口
+            </summary>
+        </member>
+        <member name="M:PayMe.Controllers.ValuesController.Get">
+            <summary>
+            简单GET获取
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PayMe.Controllers.ValuesController.Get(System.Int32)">
+            <summary>
+            ID参数GET获取
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PayMe.Controllers.ValuesController.Post(System.String)">
+            <summary>
+            基本POST请求
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:PayMe.Controllers.ValuesController.Put(System.Int32,System.String)">
+            <summary>
+            基本PUT请求
+            </summary>
+            <param name="id"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:PayMe.Controllers.ValuesController.Delete(System.Int32)">
+            <summary>
+            基本Delete请求
+            </summary>
+            <param name="id"></param>
+        </member>
+    </members>
+</doc>
