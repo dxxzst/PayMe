@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using PayMe.Bussiness.Admin;
 using PayMe.Entity;
 
@@ -9,6 +10,7 @@ namespace PayMe.Controllers.Admin
     /// </summary>
     [Produces("application/json")]
     [Route("api/admin/[controller]")]
+    [Authorize(Policy="Admin")]
     [ApiController]
     public class StudentController : ControllerBase
     {

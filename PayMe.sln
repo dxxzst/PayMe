@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayMe.Entity", "PayMe.Entit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayMe.Model", "PayMe.Model\PayMe.Model.csproj", "{A990FA3A-D8FE-42D5-AF6F-B5242C6CD8B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayMe.Token", "PayMe.Token\PayMe.Token.csproj", "{99600514-F697-41C7-8766-E89145FE9377}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{A990FA3A-D8FE-42D5-AF6F-B5242C6CD8B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A990FA3A-D8FE-42D5-AF6F-B5242C6CD8B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A990FA3A-D8FE-42D5-AF6F-B5242C6CD8B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99600514-F697-41C7-8766-E89145FE9377}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99600514-F697-41C7-8766-E89145FE9377}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99600514-F697-41C7-8766-E89145FE9377}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99600514-F697-41C7-8766-E89145FE9377}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

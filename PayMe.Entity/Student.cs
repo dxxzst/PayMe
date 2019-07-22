@@ -1,9 +1,12 @@
 ﻿
+using SqlSugar;
+
 namespace PayMe.Entity
 {
     /// <summary>
     /// 学生实体
     /// </summary>
+    [SugarTable("Student")]
     public class Student
     {
         /// <summary>

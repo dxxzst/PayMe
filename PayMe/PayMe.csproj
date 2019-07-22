@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PayMe.Bussiness\PayMe.Bussiness.csproj" />
+    <ProjectReference Include="..\PayMe.Token\PayMe.Token.csproj" />
   </ItemGroup>
 
 </Project>

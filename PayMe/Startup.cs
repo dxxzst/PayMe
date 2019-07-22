@@ -4,8 +4,10 @@ using System.Reflection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PayMe.AuthHelper;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace PayMe
@@ -40,6 +42,23 @@ namespace PayMe
                 c.IncludeXmlComments(xmlPath, true);
             });
             #endregion
+
+            #region 缓存
+            services.AddSingleton<IMemoryCache>(factory =>
+            {
+                var cache = new MemoryCache(new MemoryCacheOptions());
+                return cache;
+            });
+            #endregion
+
+            #region 认证
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("System", policy => policy.RequireClaim("SystemType").Build());
+                options.AddPolicy("Client", policy => policy.RequireClaim("ClientType").Build());
+                options.AddPolicy("Admin", policy => policy.RequireClaim("AdminType").Build());
+            });
+            #endregion
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,6 +75,11 @@ namespace PayMe
             }
 
             app.UseHttpsRedirection();
+
+            #region TokenAuth
+            app.UseMiddleware<TokenAuth>();
+            #endregion
+
             app.UseMvc();
 
             #region Swagger
